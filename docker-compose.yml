@@ -1,0 +1,18 @@
+version: "3"
+services:
+  db:
+    platform: "linux/x86_64"  # for Apple silicon
+    image: "mysql:5.7"
+    container_name: "db-timezone-demo-mysql"
+    environment:
+      # set a time zone for MySQL
+      TZ: "Asia/Seoul"
+      MYSQL_ROOT_PASSWORD: "somePassword"
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql/my.cnf:/etc/mysql/my.cnf
+    command: ["mysqld"]
+
+volumes:
+  db-timezone-demo_mysql_data:

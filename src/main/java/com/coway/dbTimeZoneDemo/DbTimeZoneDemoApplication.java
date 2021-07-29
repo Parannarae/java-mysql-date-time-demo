@@ -17,7 +17,7 @@ public class DbTimeZoneDemoApplication {
 	@PostConstruct
 	public void init() {
 		// Change the application time zone
-		TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
+//		TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
 	}
 
 }

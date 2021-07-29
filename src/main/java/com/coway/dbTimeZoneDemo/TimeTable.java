@@ -12,7 +12,7 @@ import org.springframework.data.annotation.LastModifiedBy;
 public class TimeTable {
 
   @Id
-  private long id;
+  private Long id;
   @LastModifiedBy
   private LocalDateTime localDateTimeToDatetime;
   @LastModifiedBy
